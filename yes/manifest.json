@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Yes Login",
+  "description": "This extension allow automatic yes login. If you want to change account please disable it first.\nThe only think that you need to do is just only go to the login page.
+  There are still many bug need to be fixed such as back issue and changing account issue. All who are interest are welcome to fork my repository github.com/plwai/yes-login",
+  "version": "1.0",
+  "icons": {
+    "48": "icon.png"
+  },
+  "content_scripts":[
+    {
+      "run_at": "document_end",
+      "matches": ["https://wifi.yes.my/pas/parsed/utm1/*"],
+      "js": ["content.js"]
+    },{
+      "run_at": "document_end",
+      "matches": ["http://apc.aptilo.com/apc/limit.phtml*"],
+      "matches": ["https://apc.aptilo.com/apc/limit.phtml*"],
+      "js": ["redirect.js"]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}
