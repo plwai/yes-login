@@ -1,8 +1,9 @@
 # yes-login
 
-Installation
+Installation V2
 
-1. Drop the crx file into google chrome extension tab and install.
+1. Open developer mode in extension page.
+2. Drag and drop folder "yes" into the page.
 
 How to use
 
